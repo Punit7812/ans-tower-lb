@@ -1,0 +1,10 @@
+---
+- name: exam 447 practice for LB
+  hosts: node1
+  become: true
+  remote_user: ansible
+  tasks:
+    - name: copy data from src to dest
+      copy:
+        content: "LB code testing successfully"
+        dest: /tmpp/lbtest.txt
